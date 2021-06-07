@@ -9,7 +9,7 @@ public class HelloController {
     
     @RequestMapping("/")
     public String index() {
-        return "This is demo - Maven project with (Maven+Jenkins+SonarQube+Docker+AKS+ACR+AppGW)\n";
+        return "This is demo - Java Application using (Maven+Jenkins+SonarQube+Docker+AKS+ACR+AppGW)\n";
     }
     
 }
