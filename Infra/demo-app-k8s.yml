@@ -73,7 +73,8 @@ metadata:
   namespace: demo
 spec:
   rules:
-  - http:
+  - host: www.ankitdevops.tk
+    http:
       paths:
       - path: /
         pathType: Prefix
