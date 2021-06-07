@@ -69,7 +69,7 @@ spec:
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
-  name: ingress-resource-1
+  name: demo-app-ingress
   namespace: demo
 spec:
   rules:
