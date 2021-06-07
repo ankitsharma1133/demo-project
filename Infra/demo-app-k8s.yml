@@ -23,6 +23,18 @@ spec:
       containers:
       - name: demo-app
         image: IMAGE_URL_WITH_TAG
+        readinessProbe:
+          httpGet:
+             path: /
+             port: 8080
+          initialDelaySeconds: 30
+          periodSeconds: 45
+        livenessProbe:
+          httpGet:
+             path: /
+             port: 8080
+          initialDelaySeconds: 60
+          periodSeconds: 60
         resources:
           requests:
             cpu: 50m
