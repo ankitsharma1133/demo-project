@@ -2,7 +2,7 @@ node('jenkins-slave') {
     
      stage('unit-tests') {
         sh(script: """
-            sudo docker info"
+            sudo docker info
         """)
     }
 }
