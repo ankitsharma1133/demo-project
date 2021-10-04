@@ -2,8 +2,7 @@ node('jenkins-slave') {
       
    
            stage("Cloning Repository from branch"){
-            git branch: 'jenkins',
-	    url: 'git@github.com:ankitsharma1133/demo-project.git'
+           checkout scm
         }
         
         
