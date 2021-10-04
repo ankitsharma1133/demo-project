@@ -3,7 +3,9 @@ node('jenkins-slave') {
      stage('unit-tests') {
         sh(script: """
             echo 'Hello world! on cli ' 
-           sudo docker run --rm alpine /bin/sh -c "echo hello world"
+            az acr login -n GCXACRSTAG --username GCXACRSTAG --password 'KtaChYYDsi3rvnGyDeH+PGBTIO+0LRcb'
+            az acr build --image sample/hello-world:v1 --registry GCXACRSTAG --file Dockerfile ../ 
+           
         """)
     }
 }
