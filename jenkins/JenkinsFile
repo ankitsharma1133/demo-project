@@ -3,7 +3,8 @@ node('jenkins-slave') {
      stage('unit-tests') {
         sh(script: """
             echo 'Hello world! on cli ' 
-            az acr login -n GCXACRSTAG --expose-token
+            export AZURE_CONFIG_DIR='/home/jenkins/.azure'
+             az account set --subscription "5fdcad60-7b99-4893-a86b-1267f6fa9927"
 az acr login -n GCXACRSTAG --username GCXACRSTAG --password 'KtaChYYDsi3rvnGyDeH+PGBTIO+0LRcb'
                         az acr build --image sample/hello-world:v1 --registry GCXACRSTAG --file Dockerfile ../ 
 
