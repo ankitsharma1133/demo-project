@@ -1,5 +1,13 @@
 node('jenkins-slave') {
-    
+      
+   
+           stage("Cloning Repository from branch"){
+            git branch: 'jenkins',
+			url: 'https://github.com/ankitsharma1133/demo-project.git'
+		
+        }
+        
+        
      stage('unit-tests') {
         sh(script: """
             echo 'Hello world! on cli ' 
