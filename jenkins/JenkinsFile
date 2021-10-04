@@ -15,7 +15,6 @@ node('jenkins-slave') {
              az account set --subscription "5fdcad60-7b99-4893-a86b-1267f6fa9927"
 az acr login -n GCXACRSTAG --expose-token
 pwd
-checkout([$class: 'GitSCM', branches: [[name: '*/jenkins']], extensions: [], userRemoteConfigs: [[url: 'https://github.com/ankitsharma1133/demo-project.git']]])
 ls -la
 ls -la ../
 ls -la ../..
