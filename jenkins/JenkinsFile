@@ -3,7 +3,7 @@ node('jenkins-slave') {
      stage('unit-tests') {
         sh(script: """
             echo 'Hello world! on cli ' 
-            az acr login -n GCXACRSTAG --username GCXACRSTAG --expose-token eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IkVERFE6SFVYWDpMQzQ3OlpCUk06T0k0WTpPUjY2OkFVWko6Qlk3RTo3N0pWOjU0UlI6UU1BSzpOTDI1In0'
+            az acr login -n GCXACRSTAG --username GCXACRSTAG --expose-token 'eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IkVERFE6SFVYWDpMQzQ3OlpCUk06T0k0WTpPUjY2OkFVWko6Qlk3RTo3N0pWOjU0UlI6UU1BSzpOTDI1In0'
             az acr build --image sample/hello-world:v1 --registry GCXACRSTAG --file Dockerfile ../ 
            
         """)
