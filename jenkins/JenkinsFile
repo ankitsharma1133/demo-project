@@ -7,6 +7,7 @@ node('jenkins-slave') {
              az account set --subscription "5fdcad60-7b99-4893-a86b-1267f6fa9927"
 az acr login -n GCXACRSTAG --expose-token
 pwd
+ls -la
 az acr build --image sample/hello-world:v1 --registry GCXACRSTAG  .
 
         """)
