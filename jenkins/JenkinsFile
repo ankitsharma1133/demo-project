@@ -11,7 +11,7 @@ node('jenkins-slave') {
             echo 'Hello world! on cli ' 
             export AZURE_CONFIG_DIR='/home/jenkins/.azure'
              az account set --subscription "5fdcad60-7b99-4893-a86b-1267f6fa9927"
-az acr login -n GCXACRSTAG --expose-token
+#az acr login -n GCXACRSTAG --expose-token
 pwd
 ls -la
 ls -la ../
