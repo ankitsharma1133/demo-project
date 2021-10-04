@@ -3,11 +3,8 @@ node('jenkins-slave') {
      stage('unit-tests') {
         sh(script: """
             echo 'Hello world! on cli ' 
-            //az acr login --name GCXACRSTAG --expose-token
-          
-            //az acr login -n GCXACRSTAG --username GCXACRSTAG --expose-token "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IkVERFE6SFVYWDpMQzQ3OlpCUk06T0k0WTpPUjY2OkFVWko6Qlk3RTo3N0pWOjU0UlI6UU1BSzpOTDI1In0.eyJqdGkiOiI1YWJiYjYyNS03MTRkLTQ0MDgtOGMzNy1kYzUyY2M3Mjc5NjgiLCJzdWIiOiJsaXZlLmNvbSNhc2hpc2gucGF1bEBjbG91ZHNtYXJ0ei5uZXQiLCJuYmYiOjE2MzMzMjkzOTksImV4cCI6MTYzMzM0MTA5OSwiaWF0IjoxNjMzMzI5Mzk5LCJpc3MiOiJBenVyZSBDb250YWluZXIgUmVnaXN0cnkiLCJhdWQiOiJnY3hhY3JzdGFnLmF6dXJlY3IuaW8iLCJ2ZXJzaW9uIjoiMS4wIiwicmlkIjoiOTdmYjUwMDYzYmZkNDEyYWI1MTQ5ZGZhNjdiOGZiZTAiLCJncmFudF90eXBlIjoicmVmcmVzaF90b2tlbiIsImFwcGlkIjoiMDRiMDc3OTUtOGRkYi00NjFhLWJiZWUtMDJmOWUxYmY3YjQ2IiwidGVuYW50IjoiZTMwMDFiODEtZWY4Ni00ZWI2LTk4YzctOTU3YzQ1YzBmN2UwIiwicGVybWlzc2lvbnMiOnsiQWN0aW9ucyI6WyJyZWFkIiwid3JpdGUiLCJkZWxldGUiXSwiTm90QWN0aW9ucyI6bnVsbH0sInJvbGVzIjpbXX0.pIZ3N5otRMbobadUcbAiII_8ONuFgoKq8JpaKcw_dgwxDTX3FoburLxZ3VF-qRxtIRZuVA1POn97e1gL7tNoFxaUQQwrKqzmNeAt79ji02a56BGyhMkE9HV-3yDkBP8ThLK6NNI1CVRwMsc1xw-i23Vj6GkTiAWm9VM-uve_Prn-manB5EA9oOtxFRjtYdWtXzJsvaP1O0IZyZHsQg31kER2Fm0hS9xGLXl0TEwqAnztRhLds88UrSclL-e49PDWdULK4vnaPVF2d9zlre36NGfEsfeF5iCn5XKuHp8lFHqQFJ5FUVER_bVI4H4EXBoxgXaoSvNHcioYBIQwLlyzlA"
-            az acr build --image sample/hello-world:v1 --registry GCXACRSTAG --file Dockerfile ../ 
-           
+                        az acr build --image sample/hello-world:v1 --registry GCXACRSTAG --file Dockerfile ../ 
+
         """)
     }
 }
