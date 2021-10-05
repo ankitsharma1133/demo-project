@@ -15,6 +15,7 @@ pwd
 ls -la
 ls -la ../
 ls -la ../..
+sleep 20
 az acr build --image sample/hello-world:v1 --registry GCXACRSTAG  .
 
         """)
