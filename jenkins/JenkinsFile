@@ -10,8 +10,7 @@ node('jenkins-slave') {
         sh(script: """
             echo 'Hello world! on cli ' 
             #export AZURE_CONFIG_DIR='/home/jenkins/.azure'
-az login --service-principal --username 61aa113e-9cff-4deb-a61d-6dee086e5324 --tenant e3001b81-ef86-4eb6-98c7-957c45c0f7e0  --password '8Z~zxTGHnNtn33d83vRjR-~2VBFmom7UPB'
-az acr login -n GCXACRSTAG 
+az login --service-principal --username 61aa113e-9cff-4deb-a61d-6dee086e5324 --tenant e3001b81-ef86-4eb6-98c7-957c45c0f7e0  --password '8Z~zxTGHnNtn33d83vRjR-~2VBFmom7UPB' 
 pwd
 ls -la
 ls -la ../
